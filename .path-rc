@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Path env-var shorthands
+export home="$HOME"
+
 export ph="$(dirname "${BASH_SOURCE[0]}")"
 
 # PATH initialization
