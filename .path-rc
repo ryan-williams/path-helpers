@@ -55,7 +55,7 @@ ldn() {
   l "$(dn "$@")"
 }
 
-cur_dir="$(dirname "${BASH_SOURCE[0]}")"
+local cur_dir="$(dirname "${BASH_SOURCE[0]}")"
 readlink_path="$cur_dir/readlink"
 
 if [ ! -e "$readlink_path" ]; then
