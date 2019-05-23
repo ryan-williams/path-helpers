@@ -3,7 +3,7 @@
 # `basename` wrapper that optionally takes arguments from stdin
 
 if [ $# -eq 0 ]; then
-	xargs "$0"
+  basename "$PWD"
 else
-	basename "$@"
+  basename "$@"
 fi
