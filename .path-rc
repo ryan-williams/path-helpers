@@ -78,3 +78,5 @@ defn pdn pwd-dirname
 defn pbn pwd-basename
 
 alias pcs=path-cols
+
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/lib"
