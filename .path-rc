@@ -30,6 +30,12 @@ ep() {
 prepend_to "C_INCLUDE_PATH" "/usr/local/include"
 
 alias bne=basename-minus-extension
+basename_cwd() {
+    basename "$PWD"
+}
+export -f basename_cwd
+defn bnc basename_cwd
+defn bnp basename_cwd
 
 alias de=drop-extension
 alias dx=drop-extension

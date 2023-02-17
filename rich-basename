@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 
-# `basename` wrapper that optionally takes arguments from stdin
+# `basename` wrapper that applies to positional args, if any, and falls back to reading lines from stdin
 
-if [ $# -eq 0 ]; then
-  basename "$PWD"
+if [ $# -gt 0 ]; then
+    for arg in "$@"; do
+        basename "$arg"
+    done
 else
-  basename "$@"
+    while IFS='$\n' read -r line; do
+        basename "$line"
+    done
 fi
