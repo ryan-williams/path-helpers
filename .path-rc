@@ -67,6 +67,6 @@ readlink_path="$cur_dir/readlink"
 defn pdn pwd-dirname
 defn pbn pwd-basename
 
-alias pcs=path-cols
+alias pcol=path-cols
 
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/lib"
