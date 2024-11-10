@@ -38,7 +38,6 @@ defn bnc basename_cwd
 defn bnp basename_cwd
 
 alias de=drop-extension
-alias dx=drop-extension
 alias dxn=drop-extension
 
 alias xn=extension
