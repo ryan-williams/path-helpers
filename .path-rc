@@ -48,6 +48,7 @@ alias bn=rich-basename
 alias bnx=basename-minus-extension
 
 defn cz canonicalize
+defn rp realpath
 
 defn czl realpath
 
@@ -59,9 +60,6 @@ defn dn multi-dirname
 ldn() {
   l "$(dn "$@")"
 }
-
-local cur_dir="$(dirname "${BASH_SOURCE[0]}")"
-readlink_path="$cur_dir/readlink"
 
 defn pdn pwd-dirname
 defn pbn pwd-basename
