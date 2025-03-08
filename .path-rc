@@ -3,8 +3,6 @@
 # Path env-var shorthands
 export home="$HOME"
 
-export ph="$(dirname "${BASH_SOURCE[0]}")"
-
 # PATH initialization
 #append_to_path "/opt/google/depot_tools"
 append_to_path "/usr/sbin"
