@@ -1,13 +1,18 @@
 #!/usr/bin/env bash
 
-# `basename` wrapper that applies to positional args, if any, and falls back to reading lines from stdin
+# `basename` wrapper that applies to positional args, if any, falling back to stdin lines, and finally the current directory.
 
 if [ $# -gt 0 ]; then
-    for arg in "$@"; do
-        basename "$arg"
-    done
+  for arg in "$@"; do
+    basename "$arg"
+  done
 else
-    while IFS='$\n' read -r line; do
-        basename "$line"
+  # Call `basename` on each stdin line; if there are none, just call `basename`
+  if [ -t 0 ]; then
+    basename $PWD
+  else
+    while IFS= read -r line; do
+    basename "$line"
     done
+  fi
 fi
